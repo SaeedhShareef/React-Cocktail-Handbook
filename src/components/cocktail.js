@@ -77,6 +77,13 @@ class Cocktail extends Component {
         });
       });
   };
+
+  getFullDrinkList = () => {
+    axios.get("www.thecocktaildb.com/api/json/v1/1/latest.php").then((res) => {
+      console.log(res)
+    })
+  }
+
   render() {
     return (
         <div className="container">
@@ -87,6 +94,14 @@ class Cocktail extends Component {
             onClick={this.getDrink}
           >
             Let's grab a drink
+          </Button>
+
+          <Button
+          variant="secondary"
+          className="drinkButton"
+          onClick={this.getFullDrinkList}
+          >
+            Full Drink List Button
           </Button>
 
           {this.state.clickedButton ? (
