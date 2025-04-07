@@ -3,6 +3,8 @@ import axios from "axios";
 import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/form"
+import ImportGroup from "react-bootstrap/InputGroup"
 
 class Cocktail extends Component {
   state = {
@@ -79,7 +81,7 @@ class Cocktail extends Component {
   };
 
   getFullDrinkList = () => {
-    axios.get("www.thecocktaildb.com/api/json/v1/1/latest.php").then((res) => {
+    axios.get("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=marg").then((res) => {
       console.log(res)
     })
   }
@@ -88,6 +90,8 @@ class Cocktail extends Component {
     return (
         <div className="container">
           <h1 className="header">Random Cocktail Generator</h1>
+
+          
           <Button
             variant="primary"
             className="drinkButton"
@@ -95,6 +99,8 @@ class Cocktail extends Component {
           >
             Let's grab a drink
           </Button>
+
+
 
           <Button
           variant="secondary"
