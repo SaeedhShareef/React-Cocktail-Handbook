@@ -21,14 +21,44 @@ body {
     display: flex !important;
     justify-content: center;
     color: white;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
     margin-bottom: 4%;
+
   } 
   
-  .drinkButton{
+  .surpriseButton{
+  display: block !important;
+  margin-bottom: 4% !important;
+  margin-top: 4%;
+  margin-left: auto;
+  margin-right: auto;
+  
+  /* justify-content: center; */
+  /* position: absolute; */
+  }
+  
+  .fullRecipeButton{
   display: block !important;
   margin-bottom: 4% !important;
   margin-top: 4%;
   margin: auto;
+  /* justify-content: center;
+  position: absolute; */
+  }
+
+  .resultsList{
+    /* display: block;
+    margin: auto;
+    text-align: center !important;
+    color: blue;
+    margin-bottom: 4% !important;
+    margin-top: 4%; */
+    display: flex !important;
+    justify-content: center;
+    color: white;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    margin-bottom: 4%;
+    border-bottom: none !important;
   }
   
   @media only screen and (max-width: 800px){
