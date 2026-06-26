@@ -46,9 +46,9 @@ class Cocktail extends Component {
 
   searchByDrinkId = (event) => {
     let Id = event.target.value
-   console.log(Id)
+   
   axios.get(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${Id}`).then((res) => {
-    console.log(res)
+  
     let ingredientArray = [];
         if (res.data.drinks[0].strIngredient1 != null) {
           ingredientArray.push(res.data.drinks[0].strIngredient1);
@@ -201,13 +201,13 @@ class Cocktail extends Component {
         `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${inputVar}`,
       )
       .then((res) => {
-        console.log(res);
+        
         if (!res.data.drinks) {
           this.setState({ noResults: "No Results Found" });
           return;
         } else {
           res.data.drinks.forEach((drink) => {
-            console.log(drink);
+           
             this.state.combinedResults.push(drink);
             this.state.drinkResults.push(drink.strDrink);
             this.setState({drinkImage: drink.strDrinkThumb + "/preview"});
